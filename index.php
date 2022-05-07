@@ -31,13 +31,20 @@ if ($_COOKIE['block']==null){
 		};
 if ($_COOKIE['cookies']=='Дозволити'){
 	}else{
-			echo '
-				Щоб переглядати даний сайт вам необхідно дозволити обробку cookies.
-				<br />
-				<form method="POST">
-					<button type="submit" name="cookies" value="Дозволити">Дозволити</button>
-					<button type="submit" name="block" value="Заборонити">Заборонити</button>
-				</form>
+			echo '<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		Щоб переглядати даний сайт вам необхідно дозволити обробку cookies.
+		<br />
+		<form method="POST">
+			<button type="submit" name="cookies" value="Дозволити">Дозволити</button>
+			<button type="submit" name="block" value="Заборонити">Заборонити</button>
+		</form>
+	</body>
+</html>
 				';
 			die();
 			exit();
