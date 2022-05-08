@@ -32,6 +32,11 @@ $head_page = '<!DOCTYPE html>
 				background-color: green;
 				color: lightgreen;
 			}
+			textarea {
+				border-color: lightgreen;
+				background-color: green;
+				color: lightgreen;
+			}
 			.creator_info {
 				color: lightgreen;
 				position: absolute;
