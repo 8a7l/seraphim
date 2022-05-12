@@ -1,6 +1,9 @@
 <?php
 include_once("phaccess.php");
 
+$head_page = file_get_contents("./res/head.html");
+$footer_page = file_get_contents("./res/foot.html");;
+
 
 $status_cookies = $_POST['cookies']; 
 $status_page = $_POST['page_id']; 
@@ -66,7 +69,7 @@ if ($_COOKIE['cookies']=='Дозволити'){
 		};
 
 
-include_once("./res/head.php");
+echo $head_page;
 include_once("./data/data.php");
-include_once("./res/foot.php");
+echo $footer_page;
 ?>
