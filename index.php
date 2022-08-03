@@ -7,25 +7,21 @@ $footer_page = file_get_contents("./res/foot.html");;
 
 $status_cookies = $_POST['cookies']; 
 $status_page = $_POST['page_id']; 
+$status_page_key = $_POST['page_key'];
 $status_block = $_POST['block']; 
 
+function status($value,$cookies_name){
+	if(empty($value)){
+	}else{
+		setcookie($cookies_name, $value);
+		echo '<meta http-equiv="refresh" content="0">';
+	};
+};
 
-if(empty($status_cookies)){
-	}else{
-		setcookie('cookies', $status_cookies);
-		echo '<meta http-equiv="refresh" content="0">';
-	};
-if(empty($status_page)){
-	}else{
-		setcookie('page_id', $status_page);
-		echo '<meta http-equiv="refresh" content="0">';
-	};
-if(empty($status_block)){
-	}else{
-		setcookie('block', $status_block);
-		echo '<meta http-equiv="refresh" content="0">';
-	};
-
+status($status_cookies,'cookies');
+status($status_page,'page_id');
+status($status_page_key,'page_key');
+status($status_block,'block');
 
 if ($_COOKIE['block']==null){
 	}else{
