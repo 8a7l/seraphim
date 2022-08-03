@@ -55,7 +55,7 @@ if ($_COOKIE['cookies']=='Дозволити'){
 			</form>
 		</header>
 
-		<div class="creator_info">Powered by<a href="https://github.com/8a7l" target="_blank" title="Перейти на GitHub.">8a7l</a>.</div>
+		<div class="creator_info">Powered by <a href="https://github.com/8a7l" target="_blank" title="Перейти на GitHub.">8a7l</a>.</div>
 		<script>window.onload = load_page();</script>
 	</body>
 </html>
