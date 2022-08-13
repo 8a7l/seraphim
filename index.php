@@ -24,7 +24,7 @@ function https(){
 	exit();
 	}
 };
-https();
+//https(); // Якщо сайт процює за протоколом https просто розкоментувати.
 status($status_cookies,'cookies');
 status($status_page,'page_id');
 status($status_page_key,'page_key');
