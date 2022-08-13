@@ -17,7 +17,14 @@ function status($value,$cookies_name){
 		echo '<meta http-equiv="refresh" content="0">';
 	};
 };
-
+function https(){
+	if($_SERVER['HTTP_X_FORWARDED_PROTO']=='http') {
+	header("HTTP/1.1 301 Moved Permanently");
+	header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	exit();
+	}
+};
+https();
 status($status_cookies,'cookies');
 status($status_page,'page_id');
 status($status_page_key,'page_key');
